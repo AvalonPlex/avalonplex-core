@@ -1,0 +1,27 @@
+<movie>
+    <title>Fate/stay night UNLIMITED BLADE WORKS</title>
+    <originaltitle>Fate/stay night UNLIMITED BLADE WORKS</originaltitle>
+    <sorttitle>ふぇいと すていないと あんりみてっどぶれいどわーくす</sorttitle>
+    <set>Fate/stay night</set>
+    <mpaa>PG12</mpaa>
+    <plot>街を焼き尽くす大災害が発生し、衛宮士郎は全てを失う。士郎は、魔術師を名乗る人物に引き取られる。それから10年間、士郎は養父の想いを継いで、“正義の味方”になろうと魔術の鍛錬を重ねる。しかし魔術師の家系でないためその才能のない士郎は、1つしか魔術を身につけることができなかった。ある日士郎は、“聖杯戦争”という魔術師同士の戦いに巻き込まれてしまう。それは、手にした者の願いを叶えるという聖杯を巡る戦いだった。そして偶然、サーヴァントと呼ばれる使い魔の1人・セイバーと契約を交わす。こうして意にそぐわないままマスターとなった士郎だったが、10年前の大災害も聖杯戦争が原因であると知ると、あの惨劇を繰り返さないために戦いに、身を投じる覚悟を決める。</plot>
+    <tagline>我に従え―― ならばこの運命、汝が剣に預けよう</tagline>
+    <rating>6.8</rating>
+    <releasedate>2010-01-23</releasedate>
+    <studio>スタジオディーン</studio>
+    <director>山口祐司</director>
+    <writer>佐藤卓哉</writer>
+    <genre>魔法</genre>
+    <genre>現代ファンタジー</genre>
+    <genre>ファンタジー</genre>
+    <actor>
+        <name>諏訪部順一</name>
+        <role>アーチャー</role>
+        <thumb>https://example.com/cast/諏訪部順一.jpg</thumb>
+    </actor>
+    <actor>
+        <name>杉山紀彰</name>
+        <role>衛宮士郎</role>
+        <thumb>https://example.com/cast/杉山紀彰.jpg</thumb>
+    </actor>
+</movie>
