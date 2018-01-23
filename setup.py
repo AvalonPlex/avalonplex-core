@@ -1,7 +1,8 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(name="avalonplex-core",
       version="1.0.0",
       author="Avalon Plex",
       url="https://github.com/AvalonPlex/avalonplex-core",
-      py_modules=["avalonplex_core"])
+      python_requires=">=3.6",
+      packages=find_packages(exclude=["tests"]))
