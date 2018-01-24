@@ -67,7 +67,7 @@ class Model:
             parent.append(value.as_element(ignore_none, ignore_empty, ignore_blank, trim))
             return
         else:
-            str_value = str(value)
+            str_value = str(value) if value is not None else ""
         if trim:
             str_value = str_value.strip()
         if ignore_blank and str_value.isspace():
