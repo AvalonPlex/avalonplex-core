@@ -1,5 +1,5 @@
 from os.path import join
-from typing import Optional, Union
+from typing import Union
 from xml.etree.ElementTree import Element, ElementTree, parse
 
 from avalonplex_core.model import Model, Episode, Show, Movie
@@ -15,12 +15,10 @@ class XmlSerializer:
         self.ignore_blank = ignore_blank  # type: bool
         self.trim = trim  # type: bool
 
-    def serialize(self, model: Model, name: str, folder: str = "", output: Optional[str] = None):
+    def serialize(self, model: Model, name: str, folder: str = ""):
         root = model.as_element(self.ignore_none, self.ignore_empty, self.ignore_blank, self.trim)  # type: Element
         tree = ElementTree(element=root)  # type: ElementTree
-        if output is None:
-            output = join(folder, name)
-        tree.write(output, encoding=self.encoding, short_empty_elements=self.short_empty_elements)
+        tree.write(join(folder, name), encoding=self.encoding, short_empty_elements=self.short_empty_elements)
 
     def deserialize(self, path: str) -> Union[Episode, Show, Movie]:
         root = parse(path).getroot()  # type: Element
