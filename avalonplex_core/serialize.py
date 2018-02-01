@@ -30,3 +30,6 @@ class XmlSerializer:
             return Movie.from_xml(root)
         else:
             raise NotImplementedError(f"Not supported root tag: {root.tag}")
+
+
+__all__ = [XmlSerializer]

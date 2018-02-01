@@ -276,3 +276,6 @@ class Movie(Model):
             except TypeError:
                 pass
         return movie
+
+
+__all__ = [Model, Episode, Show, Movie, Actor]

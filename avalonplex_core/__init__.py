@@ -3,9 +3,11 @@ from xml import etree
 from xml.etree.ElementTree import Element, Comment, ProcessingInstruction, _escape_cdata, \
     _escape_attrib, QName
 
+from avalonplex_core.model import *
+from avalonplex_core.normalize import *
+from avalonplex_core.serialize import *
 
-def invert_dict(source: dict) -> dict:
-    return {v: k for k, v in source.items()}
+__all__ = [Model, Episode, Show, Movie, Actor, normalize, XmlSerializer]
 
 
 # ============================  Hack Start  ============================

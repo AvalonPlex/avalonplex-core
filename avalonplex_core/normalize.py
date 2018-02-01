@@ -1,7 +1,7 @@
 import unicodedata
 from typing import Dict
 
-from avalonplex_core import invert_dict
+from avalonplex_core.utils import invert_dict
 
 
 def replace_words(source: str, replacement: Dict[str, str]) -> str:
@@ -43,3 +43,6 @@ _after = {
     "。 ": "。",
     "? ": "?"
 }
+
+
+__all__ = [normalize]
