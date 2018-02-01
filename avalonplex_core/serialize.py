@@ -1,4 +1,5 @@
-from os.path import join
+from pathlib import Path
+from typing import Optional
 from typing import Union
 from xml.etree.ElementTree import Element, ElementTree, parse
 
@@ -15,10 +16,11 @@ class XmlSerializer:
         self.ignore_blank = ignore_blank  # type: bool
         self.trim = trim  # type: bool
 
-    def serialize(self, model: Model, name: str, folder: str = ""):
+    def serialize(self, model: Model, name: str, folder: Optional[Path] = None):
+        path = str(folder.joinpath(name)) if folder is not None else name
         root = model.as_element(self.ignore_none, self.ignore_empty, self.ignore_blank, self.trim)  # type: Element
         tree = ElementTree(element=root)  # type: ElementTree
-        tree.write(join(folder, name), encoding=self.encoding, short_empty_elements=self.short_empty_elements)
+        tree.write(path, encoding=self.encoding, short_empty_elements=self.short_empty_elements)
 
     def deserialize(self, path: str) -> Union[Episode, Show, Movie]:
         root = parse(path).getroot()  # type: Element
