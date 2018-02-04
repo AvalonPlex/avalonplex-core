@@ -20,29 +20,33 @@ def normalize(source: str) -> str:
     while content != content_source:
         content_source = content
         content = content.replace("  ", " ")
+    content = replace_words(content, _after_space)
     return content
 
 
 _before = {
     "～": "$wave%",
     "＆": "&amp;",
-    "\n\n": "$doubleLineBreak%",
-    "＜": "〈",
-    "＞": "〉"
+    "\n\n": "$doubleLineBreak%"
 }
 
 _after = {
+    "＜": "〈",
+    "＞": "〉",
     "\n": "",
     "\t": " ",
     **invert_dict(_before),
     "...": "…",
     "．．．": "…",
     "・・・": "…",
-    "、、、": "…",
-    "! ": "!",
-    "。 ": "。",
-    "? ": "?"
+    "、、、": "…"
 }
 
+_after_space = {
+    "! ": "!",
+    "。 ": "。",
+    "? ": "?",
+    "、 ": "、"
+}
 
 __all__ = [normalize]
